@@ -3,7 +3,7 @@ class Pangkat {
     int nilai, pangkat;
 
     //konstruktor berparameter
-    Pangkat(int n, int p ){
+    public Pangkat(int n, int p ){
         nilai = n;
         pangkat = p;
     }
