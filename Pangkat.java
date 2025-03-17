@@ -8,15 +8,15 @@ class Pangkat {
         pangkat = p;
     }
 
-    //method brute force
-    int pangkatBF(int a, int n){
-        int hasil =1;
-        for (int i = 1; i <= n; i++) {
-            hasil = hasil * a;
+    //method brute force 
+    int pangkatBF() {  //tanpa parameter
+        int hasil = 1;
+        for (int i = 1; i <= pangkat; i++) {  
+            hasil *= nilai;
         }
         return hasil;
     }
-
+    
     //method divide conquer
     int pangkatDC(int a, int n){
         if (n==1) {

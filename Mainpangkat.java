@@ -21,8 +21,7 @@ public class Mainpangkat {
         //hasil pangkat
         System.out.println("HASIL PANGKAT BRUTEFORCE");
         for (Pangkat p : png) {
-            System.out.println(p.nilai + "^" + p.pangkat + " = " + p.pangkatBF(p.nilai, p.pangkat));
-            
+           System.out.println(p.pangkatBF());
         }
         System.out.println("HASIL PANGKAT DIVIDE CONQUER");
         for (Pangkat p : png) {
