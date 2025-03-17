@@ -1,32 +1,32 @@
-public class mahasiswa {
+public class Mahasiswa {
     int nilaiUTS;
     int nilaiUAS;
 
-    public mahasiswa(int nilaiUTS, int nilaiUAS) {
+    public Mahasiswa(int nilaiUTS, int nilaiUAS) {
         this.nilaiUTS = nilaiUTS;
         this.nilaiUAS = nilaiUAS;
     }
 
     // Divide and Conquer untuk mencari nilai UTS tertinggi
-    public static double cariMaxDC(int[] arr, int l, int r) {
+    public static int cariMaxDC(int[] arr, int l, int r) {
         if (l == r) {
             return arr[l];
         }
         int mid = (l + r) / 2;
-        double maxLeft = cariMaxDC(arr, l, mid);
-        double maxRight = cariMaxDC(arr, mid + 1, r);
+        int maxLeft = cariMaxDC(arr, l, mid);
+        int maxRight = cariMaxDC(arr, mid + 1, r);
         return Math.max(maxLeft, maxRight);
     }
-x   
+
     // Divide and Conquer untuk mencari nilai UTS terendah
-    public static double cariMinDC(int[] arr, int l, int r) {
+    public static int cariMinDC(int[] arr, int l, int r) {
         if (l == r) {
             return arr[l];
         }
         int mid = (l + r) / 2;
-        double lsum = cariMinDC(arr, l, mid);
-        double rsum = cariMaxDC(arr, mid + 1, r);
-        return lsum + rsum;
+        int lsum = cariMinDC(arr, l, mid);
+        int rsum = cariMinDC(arr, mid + 1, r);
+        return Math.min(lsum, rsum);
     }
 
     // Brute Force untuk menghitung rata-rata nilai UAS
